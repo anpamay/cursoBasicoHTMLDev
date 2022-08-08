@@ -9,6 +9,8 @@ body{
 	font-size:  13px;
 }
 
+
+
 .container{
     width:  1140px;
     margin:  0 auto; /*Arriba derecha abajo izquierda. orden de la margen*/
@@ -16,6 +18,10 @@ body{
     padding-left: 15px;
     position:  relative;
 
+}
+
+header .container .hamb{
+    display: none;
 }
 
 .row {
@@ -67,8 +73,12 @@ body{
 }
 
 
+p { color: black; }
+
 a{ 
   display:  inline-block; /*Los elementos inline solos no se puede dar alto*/
+  text-decoration: none;
+
  }
 
 header {
@@ -102,6 +112,62 @@ header .container .logo{
     width:  100px;
 }
 
+footer
+{  
+    background-color: black;
+    color: white; 
+    padding-top:  60px; 
+}
+
+
+footer ul{
+     padding-left: 0;
+     list-style:  none;
+     margin: 0;
+}
+
+footer ul li{
+     margin-bottom: 10px ;
+
+
+
+}
+
+footer .redes{
+    font-size: 30px;
+    display: flex;
+    
+}
+
+footer .redes a {
+    margin:  0 7.5px;
+}
+
+footer a{
+       color:  white;
+
+}
+
+footer p{
+    color:  white;
+    margin-bottom: 30px;
+
+}
+
+footer .logo-footer{
+
+    width: 100%;
+    
+}
+footer .barra-footer{
+
+    background-color:  grey;
+    text-align:  center;
+    padding-right:  15px;
+    padding-left:  15px;
+    padding-top:  20px;
+    padding-bottom: 20px;
+}
 
 .columna {
 
@@ -117,6 +183,11 @@ header .container .logo{
 
 .columna-50{ 
  width: 50%; }
+
+.columna-25{
+   width:  25%;
+
+ }
 
  .empujar-50{
     margin-left:  50%;
@@ -317,3 +388,87 @@ header .container .logo{
    margin-bottom: 0;
 
  }
+ @media(max-width: 767px)  /*Tamaño máximo pantalla de celular*/
+ {   .container{
+       width: 100%;        /*Dentro de este parentesis funciona en los dispositivos de ancho maximo 767px*/
+      }
+    header .container nav{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-right: 15px;
+        padding-left:  15px;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4s ease;
+        transform: translateX(100);
+    }
+
+    header .container nav a {
+        font-size: 30px;
+        margin: 15px 0;
+
+    }
+
+    .hamb {
+           display: block;
+           font-size: 40px;
+           color: red;
+
+    }
+
+    #inicio { height:100vh }   /*100vh es el alto del dispositivo*/
+
+    #inicio img{
+           height: 100%;
+           object-fit: cover;
+           object-position: center;
+
+    }
+
+    .columna-mobile-100{
+        width: 100%;
+    }
+
+    .columna-mobile-50{
+        width: 50%;
+    }
+
+    body{
+        font-size: 15px;
+    }
+
+    #servicios .bloque-servicio {
+
+    margin-bottom: 15px;
+ }
+
+ #contactenos {padding: 0;}
+
+ #contactenos iframe{
+           position: relative;
+           height: 50vh;
+
+ }
+.empujar-mobile-0 { margin-left:0; }
+.sinpadding-mobile{padding: 0;}
+
+form .boton .boton-negro{
+    width: 100%;
+}
+
+footer{ text-align:center; }
+footer .logo-footer{
+    width: 50%;
+}
+
+footer .redes{
+    justify-content: center ;
+}
+ } 
+ /*758px para tablets*/
